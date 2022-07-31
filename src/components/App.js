@@ -41,9 +41,7 @@ function App() {
   }, [setContacts]);
 
   useEffect(() => {
-    if (contacts !== contacts) {
-      localStorage.setItem('contacts', JSON.stringify(contacts));
-    }
+    localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
 
   const normalizeFilter = filter.toLowerCase();
